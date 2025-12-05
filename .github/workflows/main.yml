@@ -57,7 +57,6 @@ jobs:
           push: false
           tags: ${{ env.IMAGE_NAME }}:latest
 
-      # Optional: push image (uncomment if you have secrets)
       - name: Build and push image to Docker Hub
         if: secrets.DOCKERHUB_USERNAME && secrets.DOCKERHUB_TOKEN
         uses: docker/build-push-action@v5
