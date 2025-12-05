@@ -11,10 +11,6 @@ COPY requirements.txt /requirements.txt
 # Install runtime dependencies (none) and dev deps for tests
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose nothing by default; simulator is CLI
-# Default logfile location
-VOLUME ["/"]
-
 # Default command: run simulator indefinitely
 
 CMD ["python", "Microclimate_sim.py", "--logfile", "/microclimate_log.csv"]
