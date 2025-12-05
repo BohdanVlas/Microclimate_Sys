@@ -5,7 +5,7 @@ FROM python:3.11-slim
 WORKDIR /
 
 # Copy source
-COPY microclimate_sim.py /microclimate_sim.py
+COPY Microclimate_sim.py /Microclimate_sim.py
 COPY requirements.txt /requirements.txt
 
 # Install runtime dependencies (none) and dev deps for tests
@@ -17,4 +17,5 @@ VOLUME ["/"]
 
 # Default command: run simulator indefinitely
 
-CMD ["python", "microclimate_sim.py", "--logfile", "/microclimate_log.csv"]
+CMD ["python", "Microclimate_sim.py", "--logfile", "/microclimate_log.csv"]
+
