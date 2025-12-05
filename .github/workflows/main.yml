@@ -57,7 +57,7 @@ jobs:
           tags: ${{ env.IMAGE_NAME }}:latest
 
       - name: Run simulator with docker-compose
-        run: docker-compose up --build -d
+        run: docker compose up --build -d
 
       - name: Build and push image to Docker Hub
         uses: docker/build-push-action@v5
