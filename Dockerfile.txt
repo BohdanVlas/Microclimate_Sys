@@ -13,7 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Expose nothing by default; simulator is CLI
 # Default logfile location
-VOLUME ["/data"]
+VOLUME ["/"]
 
 # Default command: run simulator indefinitely
-CMD ["python", "microclimate_sim.py", "--logfile", "/data/microclimate_log.csv"]
+
+CMD ["python", "microclimate_sim.py", "--logfile", "/microclimate_log.csv"]
